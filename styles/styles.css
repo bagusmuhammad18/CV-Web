@@ -102,6 +102,7 @@ nav ul li a:hover{
     overflow-y: auto;
     overflow-x: hidden;
     perspective: 10px;
+    /* z-index: 1000000; */
 }
 .hero{
     display: flex;
@@ -287,5 +288,73 @@ main .about{
 .project1 .imgProject1:hover,.project2 .imgProject2:hover{
     scale: calc(0.96);
 }
+.contactDesc{
+    font-family: 'Montserrat', Arial;
+    width: 45vw;
+    font-size: 1.2em;
+    margin: 1em;
+    line-height: 1.4em;
+    text-align: justify;
+    font-weight: smaller;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column;
+    gap: 0.7em;
+    margin-top: 1em;
+    
+}
+form input, form textarea{
+    box-sizing: border-box;
+    background-color: #282828;
+    padding-left: 1em;
+    border: 0;
+    color: #fff;
+    /* font-size: 1em; */
+    font-family: 'Montserrat', Arial;
 
+}
+form ::placeholder{
+    color: #fff;
+    opacity: 0.5;
+}
+form input{
+    width: 45vw;
+    height: 7vh;
+
+}
+form textarea{
+    width: 45vw;
+    height: 20vh;
+    padding-top: 0.6em;
+}
+form button{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 20vh;
+    height: 7vh;
+    color: #FFF;
+    background-color: rgba(255, 0, 0, 0);
+    transition: 0.3s;
+    /* border: 1px solid blue; */
+    border: 0;
+    margin-top: 1vh;
+    margin-bottom: 10vh;
+    letter-spacing: 3px;
+    overflow: hidden;
+    padding: 0px;
+    cursor: pointer;
+    /* padding-top: 2.5vh; */
+    border-radius: 3%;
+}
+form button:hover{
+    background-color: rgba(255, 0, 0, 0.6);
+}
 /* End of Main */
