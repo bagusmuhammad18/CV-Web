@@ -48,6 +48,12 @@ table {
 }
 
 /* Styles */
+*{ 
+    scroll-behavior: smooth
+}
+*{
+    scroll-padding-top: 7vh; /* height of sticky header */
+}
 @font-face {
     font-family: 'Montserrat';
     src: url(assets/Montserrat-Medium.woff) format(woff);
@@ -60,6 +66,7 @@ body{
     /* height: 700vh; */
     background-color:#1F1F1F;
     z-index: -9999;
+    /* overflow: hidden; */
 }
 nav{
     width: 100%;
@@ -67,7 +74,7 @@ nav{
     background-color: #1F1F1F;
     /* background-color: white; */
     display: flex;
-    position: fixed;
+    position: sticky;
     top:0;
     z-index: 100;
     /* flex-direction: column; */
@@ -99,7 +106,7 @@ nav ul li a:hover{
 /* Start of Hero */
 .wrapper{
     height: 100vh;
-    overflow-y: auto;
+    overflow-y: scroll;
     overflow-x: hidden;
     perspective: 10px;
     /* z-index: 1000000; */
@@ -348,7 +355,6 @@ form button{
     margin-top: 1vh;
     margin-bottom: 10vh;
     letter-spacing: 3px;
-    overflow: hidden;
     padding: 0px;
     cursor: pointer;
     /* padding-top: 2.5vh; */
@@ -357,4 +363,5 @@ form button{
 form button:hover{
     background-color: rgba(255, 0, 0, 0.6);
 }
+
 /* End of Main */

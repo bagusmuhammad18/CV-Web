@@ -5,22 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
+    <script type="text/javascript" src="scripts/scripts.js"></script>
+    <!-- <script>
+        window.addEventListener("scroll",function(){
+            var nav = document.querySelector(".test")
+            nav.classList.toggle("sticky", window.scrollY>0);
+        })
+
+    </script> -->
     <title>Bagus Muhammad</title>
 </head>
 <body>
     <!-- Start of Navbar -->
-    <nav>
-        <ul>
-            <li><a href="#">HOME</a></li>  
-            <li><a href="#">ABOUT</a></li>  
-            <li><a href="#">SKILLS</a></li>  
-            <li><a href="#">PROJECTS</a></li>  
-            <li><a href="#">CONTACT</a></li>  
-        </ul>
-    </nav>
-    <!-- End of Navbar -->
     <div class="wrapper">
-        <div class="hero">
+        <nav id="navbar">
+            <ul>
+                <li><a href="#home">HOME</a></li>  
+                <li><a href="#about">ABOUT</a></li>  
+                <li><a href="#skills">SKILLS</a></li>  
+                <li><a href="#projects">PROJECTS</a></li>  
+                <li><a href="#contact">CONTACT</a></li>  
+            </ul>
+        </nav>
+    <!-- End of Navbar -->
+    <!-- <div class="wrapper"> -->
+        <div id="home" class="hero">
             <div class="overlay"></div>
             <img class="background" src="assets/img/city.jpg" alt="">
             <div class="welcome">
@@ -32,10 +41,10 @@
             <a class="viewMore" href="#about">View More</a>
         </div>
         <main>
-            <h3><span class="underline"></span>About</h3>
+            <h3 id="about"><span class="underline"></span>About</h3>
             <img class="profilePhoto" src="assets/img/bagus.png" alt="bagus_photo">
             <p class="about">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis cupiditate soluta asperiores eum iure libero praesentium possimus commodi et nam laborum, eveniet quisquam iusto minima harum ducimus molestiae, similique repellendus!</p>
-            <h3><span class="underline"></span>Skills</h3>
+            <h3 id="skills"><span class="underline"></span>Skills</h3>
             <div class="containerSkill">
                 <span class="html5">
                     <img src="assets/img/html_logo.png" alt="html_logo">
@@ -47,7 +56,7 @@
 
                 </span>
             </div>
-            <h3><span class="underline"></span>Projects</h3>
+            <h3 id="projects"><span class="underline"></span>Projects</h3>
             <div class="project">
                 <div class="project1">
                     <a href="#"><img class="imgProject1" src="assets/img/gmrt_web.png" alt=""></a>
@@ -60,12 +69,13 @@
                     <!-- <p></p> -->
                 </div>
             </div>
-            <h3><span class="underline"></span>Contact</h3>
+            <h3 id="contact"><span class="underline"></span>Contact</h3>
             <p class="contactDesc">If you have a question or are interested in collaborating, kindly leave your details.</p>
-            <form>
+            <form action="https://formsubmit.co/bagus.muh2001@mail.ugm.ac.id" method="POST">
                 <input type="text" name="Name" placeholder="Full Name" required>
                 <input type="email" name="Email" placeholder="Email" required>
                 <textarea name="Message" placeholder="Message" required></textarea>
+                <input type="hidden" name="_captcha" value="false">
                 <button type="submit">SEND</button>
 
             </form>
