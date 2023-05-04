@@ -277,14 +277,19 @@ main .about{
     align-items: center;
     gap: 3em;
 }
-.containerSkill .html5, .css3{
+.containerSkill .html5,  .containerSkill .css3{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     /* margin-bottom: 10px; */
-
+    transition: 0.2s linear;
+    transform-origin: 0;
 }
+.containerSkill .html5:hover, .containerSkill .css3:hover{
+    transform: perspective(100px) rotateY(1deg);
+}
+
 .containerSkill span{
     margin-bottom: 30px;
     display: flex;
