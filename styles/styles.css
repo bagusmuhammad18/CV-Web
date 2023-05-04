@@ -49,24 +49,31 @@ table {
 
 /* Styles */
 *{ 
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
+    scroll-padding-top: 10vh; /* 10eight of sticky header */
 }
-*{
-    scroll-padding-top: 7vh; /* height of sticky header */
-}
+
 @font-face {
     font-family: 'Montserrat';
     src: url(assets/Montserrat-Medium.woff) format(woff);
     font-weight: normal;
     font-style: normal;
 }
+/* Start of Scrollbar */
+::-webkit-scrollbar{
+    width: 0.5vw;
+}
+::-webkit-scrollbar-thumb{
+    background-color: red;
+    /* border-radius: 10%; */
+}
+/* End of Scrollbar */
+
 /* Start of Navbar */
 body{
-    /* width: 100%; */
-    /* height: 700vh; */
     background-color:#1F1F1F;
     z-index: -9999;
-    /* overflow: hidden; */
+    
 }
 nav{
     width: 100%;
@@ -92,15 +99,36 @@ nav ul li{
     margin: 10px;
 }
 nav ul li a{
+    /* display: block; */
+    position: relative;
     color: #FFFFFF; 
     font-size: 0.8em;
     text-decoration: none;
     padding: 0.7em;
     transition: 0.5s;
-    border-radius: 10%;
+    /* border-radius: 10%; */
+
+}
+nav ul li a::after{
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: red;
+    height: 3px;
+    width: 100%;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: 0.2s linear;
 }
 nav ul li a:hover{
-    background-color: #00171F;
+    /* background-color: #00171F; */
+    opacity: 0.7;
+    /* transform: scaleX(1); */
+}
+nav ul li a:hover::after{
+    /* width: 50%; */
+    transform: scaleX(0.7);
+
 }
 /* End of Navbar */
 /* Start of Hero */
@@ -109,6 +137,13 @@ nav ul li a:hover{
     overflow-y: scroll;
     overflow-x: hidden;
     perspective: 10px;
+    min-height: 100vh;
+    position: relative;
+    /* background-color:green; */
+
+    
+    /* display: flex; */
+    /* border: 10px solid green; */
     /* z-index: 1000000; */
 }
 .hero{
@@ -197,7 +232,7 @@ main{
     align-items: center;
     flex-direction: column;
     background-color:#1F1F1F;
-    height: 100vh;
+    height: auto;
 }
 main h3{
     font-family: 'Montserrat', Arial;
@@ -334,8 +369,9 @@ form input{
 }
 form textarea{
     width: 45vw;
-    height: 20vh;
+    height: 30vh;
     padding-top: 0.6em;
+    resize: none;
 }
 form button{
     font-family: Arial, Helvetica, sans-serif;
@@ -364,4 +400,27 @@ form button:hover{
     background-color: rgba(255, 0, 0, 0.6);
 }
 
+
+footer{
+    width: 100%;
+    height: 15vh;
+    background-color: #282828;
+    /* position: absolute; */
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+.github_logo,.linkedin_logo{
+    width: 2.0em;
+    filter: grayscale(1);
+    transition: 0.2s linear;
+}
+.github_logo:hover,.linkedin_logo:hover{
+    filter: grayscale(0);
+    transform: scale(1.05);
+
+}
 /* End of Main */
