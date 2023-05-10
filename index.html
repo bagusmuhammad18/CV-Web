@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
-    <script type="text/javascript" src="scripts/scripts.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
     <title>Bagus Muhammad</title>
 </head>
 <body class="preload">
+<!-- <body> -->
     <!-- Start of Navbar -->
     <div class="wrapper">
         <nav id="navbar">
             <ul>
-                <li><a href="#home">HOME</a></li>  
+                <li><a href="#home" onclick="clickFunction()">HOME</a></li>  
                 <li><a href="#about">ABOUT</a></li>  
                 <li><a href="#skills">SKILLS</a></li>  
                 <li><a href="#projects">PROJECTS</a></li>  
@@ -79,6 +80,13 @@
 
         </footer>
     </div>
+    <a id="goTop" href="#home"><i data-feather="chevrons-up"></i></a>
 
+
+
+    <script type="text/javascript" src="scripts/scripts.js"></script>
+    <script>
+        feather.replace()
+    </script>
 </body>
 </html>
