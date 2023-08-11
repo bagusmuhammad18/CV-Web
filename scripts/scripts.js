@@ -6,9 +6,10 @@ body.addEventListener("click", function (e) {
 // Typing animation
 const dynamicText = document.getElementsByClassName("dynamic")[0];
 const words = [
+  "front-end web developer",
   "mobile app developer",
   "deep learning enthusiast",
-  "part-time gamer :)",
+  "part-time Valorant player :)",
 ];
 let wordIndex = 0;
 let charIndex = 0;
