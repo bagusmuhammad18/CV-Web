@@ -291,13 +291,36 @@ nav ul li a:hover::after {
   /* height: 40vh; */
   /* border: 1px solid white; */
 }
-.hero .welcome p span {
+.hero .welcome p:nth-child(1) span {
   display: inline-block;
   color: red;
   font-family: "Montserrat", Arial;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.hero .welcome p:nth-child(2) span {
+  position: relative;
+  /* text-decoration: underline; */
+}
+.hero .welcome p:nth-child(2) span::before {
+  content: "";
+  right: -10px;
+  top: 50%;
+  position: absolute;
+  height: 1em;
+  width: 0.06em;
+  background: red;
+  transform: translateY(-45%);
+  animation: blink 0.7s infinite;
+}
+.hero .welcome p:nth-child(2) span.stop-blinking::before {
+  animation: none;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 .hero .viewMore {
   /* line-height: 2em; */
@@ -310,6 +333,7 @@ nav ul li a:hover::after {
   border-radius: 10px;
   font-size: 25px;
   transition: 0.1s linear;
+  margin-top: 1em;
 }
 .hero .viewMore:hover {
   background-color: red;
@@ -471,9 +495,17 @@ main .about {
   /* left: 10vw; */
   margin: 1em;
   height: 40vh;
+  width: fit-content;
+  /* aspect-ratio: 16/9; */
+  width: auto;
   transition: 0.2s;
   border-radius: 10px;
   /* box-shadow: 20px 20px #3216BB; */
+}
+.project3 .videoProject1 {
+  aspect-ratio: 1896/902;
+  border-radius: 10px;
+  height: 40vh;
 }
 .project1 .imgProject1:hover,
 .project2 .imgProject2:hover {
@@ -537,7 +569,7 @@ form button {
   height: 7vh;
   color: #fff;
   background-color: rgba(255, 0, 0, 0);
-  transition: 0.3s;
+  transition: 0.3s !important;
   /* border: 1px solid blue; */
   border: 0;
   margin-top: 1vh;
@@ -581,9 +613,8 @@ footer {
   right: 0;
   color: #fff;
   margin: 1.5em;
-  padding: 0.1rem;
+  padding: 1vmax;
   background-color: red;
-  border-radius: 5px;
   border-radius: 50%;
   opacity: 0;
   visibility: hidden;
@@ -599,8 +630,22 @@ footer {
   width: auto;
   height: 1.9em;
 }
+
+.hidden {
+  opacity: 0;
+  filter: blur(0px);
+  transform: translateY(10%);
+  transition: all 1s;
+}
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
 /* End of Main */
 
 /* responsive */
+/* Tablet */
 @media screen and (max-width: 1024px) {
 }

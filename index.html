@@ -28,22 +28,24 @@
         <img class="background" src="assets/img/city.jpg" alt="" />
         <div class="welcome">
           <p>
-            Hello, I'm&nbsp;
+            Hello everyone, I am&nbsp;
             <span> Bagus</span>
-            .
+            <!-- . -->
           </p>
-          <p>I'm a passionate front-end web developer.</p>
+          <p>
+            I am a&nbsp;<span class="dynamic">front-end web developer</span>
+          </p>
           <a class="viewMore" href="#about">View More</a>
         </div>
       </div>
       <main>
-        <h3 id="about"><span class="underline"></span>About</h3>
+        <h3 class="hidden" id="about"><span class="underline"></span>About</h3>
         <img
-          class="profilePhoto"
+          class="profilePhoto hidden"
           src="assets/img/bagus.png"
           alt="bagus_photo"
         />
-        <p class="about">
+        <p class="about hidden">
           Hello, I'm Bagus, a second-year undergraduate student pursuing a
           Bachelor's degree in Electronics and Instrumentation at UGM. I am
           passionate about web development and currently focusing on building my
@@ -53,8 +55,10 @@
           create impactful web solutions and contribute to the digital
           landscape.
         </p>
-        <h3 id="skills"><span class="underline"></span>Skills</h3>
-        <div class="containerSkill">
+        <h3 id="skills" class="hidden">
+          <span class="underline"></span>Skills
+        </h3>
+        <div class="containerSkill hidden">
           <span class="html5">
             <div class="completion">Started learning on April 2023</div>
             <img class="child" src="assets/img/html_logo.png" alt="html_logo" />
@@ -103,8 +107,10 @@
             <p class="child">OpenCV</p>
           </span>
         </div>
-        <h3 id="projects"><span class="underline"></span>Projects</h3>
-        <div class="project">
+        <h3 id="projects" class="hidden">
+          <span class="underline"></span>Projects
+        </h3>
+        <div class="project hidden">
           <div class="project1">
             <a href="https://github.com/bagusmuhammad18/CV-Web" target="_blank"
               ><img
@@ -114,13 +120,11 @@
             /></a>
           </div>
           <div class="project2">
-            <a
-              href="https://github.com/bagusmuhammad18/IronFit-Gym"
-              target="_blank"
+            <a href="https://sobatfeses.tech" target="_blank"
               ><img
                 class="imgProject2"
-                src="assets/img/webgym.png"
-                alt="gym_web"
+                src="assets/img/sobatfeses.png"
+                alt="sobatfeses"
             /></a>
           </div>
           <div class="project3">
@@ -137,20 +141,40 @@
             ></a>
           </div>
         </div>
-        <h3 id="contact"><span class="underline"></span>Contact</h3>
-        <p class="contactDesc">
+        <h3 id="contact" class="hidden">
+          <span class="underline"></span>Contact
+        </h3>
+        <p class="contactDesc hidden">
           If you have a question or are interested in collaborating, kindly
           leave your details.
         </p>
         <form
           action="https://formsubmit.co/bagus.muh2001@mail.ugm.ac.id"
           method="POST"
+          class="hidden"
         >
-          <input type="text" name="Name" placeholder="Full Name" required />
-          <input type="email" name="Email" placeholder="Email" required />
-          <textarea name="Message" placeholder="Message" required></textarea>
-          <input type="hidden" name="_captcha" value="false" />
-          <button type="submit">SEND</button>
+          <input
+            class="hidden"
+            type="text"
+            name="Name"
+            placeholder="Full Name"
+            required
+          />
+          <input
+            class="hidden"
+            type="email"
+            name="Email"
+            placeholder="Email"
+            required
+          />
+          <textarea
+            class="hidden"
+            name="Message"
+            placeholder="Message"
+            required
+          ></textarea>
+          <input class="hidden" type="hidden" name="_captcha" value="false" />
+          <button class="hidden" type="submit">SEND</button>
         </form>
       </main>
       <footer>
