@@ -3,13 +3,18 @@ body.addEventListener("click", function (e) {
   console.log(e.target);
 });
 
+// // Hyperlink without changing url
+// document.getElementById("button1").addEventListener("click", function () {
+//   document.getElementById("section1").scrollIntoView({ behavior: "smooth" });
+// });
+
 // Typing animation
 const dynamicText = document.getElementsByClassName("dynamic")[0];
 const words = [
   "front-end web developer",
   "mobile app developer",
-  "deep learning enthusiast",
-  "part-time Valorant player :)",
+  "computer vision enthusiast",
+  "part-time gamer :)",
 ];
 let wordIndex = 0;
 let charIndex = 0;
@@ -35,6 +40,7 @@ const typeEffect = () => {
   }
 };
 typeEffect();
+
 //start showing navbar when scrolling
 const wrapper = document.querySelector(".wrapper");
 const nav = document.getElementById("navbar");
