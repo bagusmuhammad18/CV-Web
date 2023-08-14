@@ -484,27 +484,35 @@ main .about {
 
 .project {
   display: flex;
-  width: 90vw;
+  width: 100vw;
   height: auto;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   /* flex-direction: column; */
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  gap: 5vmin;
 }
-.project1 {
-  border: 1px solid red;
+.project1,
+.project2,
+.project3 {
+  /* border: 1px solid red; */
+  display: grid;
+  place-items: center;
+  width: 40%;
+  height: auto;
 }
 .project1 .imgProject1,
 .project2 .imgProject2,
 .project3 .videoProject1 {
   /* position: absolute; */
   /* left: 10vw; */
-  margin: 1em;
+  /* margin: 1em; */
   height: auto;
   /* width: fit-content; */
   /* aspect-ratio: 16/9; */
-  width: 50%;
+  /* width: 50%; */
+  max-width: 100%;
   transition: 0.2s;
   border-radius: 10px;
   /* box-shadow: 20px 20px #3216BB; */
@@ -639,7 +647,7 @@ footer {
   opacity: 0;
   filter: blur(0px);
   transform: translateY(10%);
-  transition: all 1s;
+  /* transition: all 1s; */
 }
 .show {
   opacity: 1;
@@ -712,7 +720,7 @@ footer {
 
   main .about {
     width: 85%;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: 1em;
     line-height: 1.4em;
     text-align: left;
@@ -728,5 +736,35 @@ footer {
     margin-bottom: 0px;
     height: 10em;
     width: 10em;
+  }
+  .project {
+    gap: 5vmin;
+  }
+  .project1,
+  .project2,
+  .project3 {
+    width: 70%;
+  }
+
+  .contactDesc {
+    width: 85%;
+    font-size: 1.2rem;
+    margin: 1em;
+    line-height: 1.5em;
+    text-align: justify;
+    font-weight: smaller;
+  }
+
+  form input {
+    width: 85vw;
+    height: 7vh;
+    font-size: 1.2rem;
+  }
+  form textarea {
+    width: 85vw;
+    height: 30vh;
+    padding-top: 0.6em;
+    resize: none;
+    font-size: 1.2rem;
   }
 }
