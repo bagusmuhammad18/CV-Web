@@ -714,6 +714,19 @@ footer {
     color: #ffffff;
     z-index: 0;
   }
+  .hero .viewMore {
+    /* line-height: 2em; */
+    font-family: "Montserrat", Arial;
+    /* margin: 0.7em; */
+    color: red;
+    text-decoration: none;
+    padding: 5px 30px;
+    border: 2px solid red;
+    border-radius: 10px;
+    font-size: 5vmin;
+    transition: 0.1s linear;
+    margin-top: 1.5em;
+  }
   main .profilePhoto {
     width: 70vmin;
   }
