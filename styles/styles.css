@@ -812,7 +812,9 @@ footer {
     /* border: 10px solid red; */
   }
   .containerSkill {
+    width: 100vmin;
     gap: 1rem;
+    /* border: 1px solid red; */
   }
 
   .containerSkill span {
