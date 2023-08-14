@@ -650,7 +650,7 @@ footer {
   opacity: 0;
   filter: blur(0px);
   transform: translateY(10%);
-  transition: all 0s;
+  transition: all 0.5s;
 }
 .show {
   opacity: 1;
