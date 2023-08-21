@@ -382,6 +382,7 @@ main .underline {
   z-index: -1;
   opacity: 0.6;
 }
+
 main .profilePhoto {
   margin: 1em;
   /* visibility: hidden; */
